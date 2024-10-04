@@ -1,0 +1,41 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+/*********************** - ALPHA 3.0.1 - ********************************************************************************************************/
+
+## [3.0.1] - 2024-09-20
+### Added
+- New Skin
+- Stream the remote desktop from execute commands.
+- Logs folder for all logs (remote shell / keyloggers ect ...)
+
+### Trying
+- Closing properly the stream of a remote desktop, hodin server don't go out of the loop at all.
+
+## [3.0.1] - 2024-09-26
+### Fixed
+- When start the dekstop stream the server still under listening.
+
+## [3.0.1] - 2024-09-29
+### Added
+- enable general ddos attacks
+- Update IP_Finder.py for pyhton 3
+
+### Fixed
+- update installer_Kali_Linux.sh file in the folder : Dependencies_installer (Client)
+
+## [3.0.1] - 2024-10-03
+### Added
+- Take screenshot option from execute commands panel.
+
+## [3.0.1] - 2024-10-04
+### Added
+- Add exit keylogger button, coded the server side code. The keylogger still active but it exit the thread, so the server
+	go under listenning state and you can make other thing with the rat same time.
+
+### Removed
+### Trying
+### Fixed
