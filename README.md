@@ -13,15 +13,15 @@ Install file corresponding to your distrib from folder : Dependencies_installer 
  - Hodin from A to Z :
  
  https://www.youtube.com/watch?v=E7BmMhXdN4Y
- 
-![Capture d’écran du 2024-09-26 20-27-07](https://github.com/user-attachments/assets/81cfd75b-8208-442a-8227-de88c99d839a)
 
-![Capture d’écran du 2024-09-26 20-27-11](https://github.com/user-attachments/assets/e4618d44-22cf-4b1b-8a96-770847e4b549)
+![Capture d’écran du 2024-10-01 14-43-55](https://github.com/user-attachments/assets/c199d6ce-309a-4f2c-b47b-92e6e7cf71ff)
 
-![Capture d’écran du 2024-09-26 20-27-15](https://github.com/user-attachments/assets/399d713d-50b0-41c8-b5d7-3b1ae5e955a4)
+![Capture d’écran du 2024-10-01 14-43-59](https://github.com/user-attachments/assets/7b823288-fd3f-44bc-b39c-f9ca52bbcf4e)
 
-![Capture d’écran du 2024-09-26 20-27-18](https://github.com/user-attachments/assets/10abc12a-624d-4a91-b883-3552e5258a8a)
+![Capture d’écran du 2024-10-01 14-44-07](https://github.com/user-attachments/assets/347b3cb2-d189-4c38-b0d8-e93a1d29d7cf)
 
-![Capture d’écran du 2024-09-26 20-27-21](https://github.com/user-attachments/assets/6dd063cc-aabd-471d-9e7b-a2e8c991eada)
+![Capture d’écran du 2024-10-03 07-11-42](https://github.com/user-attachments/assets/3cf639c2-2d03-414e-9df7-fe9e17e1d936)
+
+![Capture d’écran du 2024-10-01 14-44-12](https://github.com/user-attachments/assets/5924002c-c5bd-44a9-bdd3-f441a4a12abb)
 
 Enjoy & Have Fun !
