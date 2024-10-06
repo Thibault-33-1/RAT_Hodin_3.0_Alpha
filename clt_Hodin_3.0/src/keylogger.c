@@ -25,7 +25,7 @@ extern GtkWidget *text_view;
 //GtkWidget *rs_text_view;
 //GtkWidget *ddos_text_view;
 
-void close_keylogger(void)
+void exit_keylogger(void)
 {
     SOCKET keylogger_sock;
     SOCKADDR_IN sin;

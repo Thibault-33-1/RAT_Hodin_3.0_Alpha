@@ -749,7 +749,7 @@ void cb_files_uploader(GtkButton *button, gpointer user_data)
 
         g_free(text);
 
-        confirmation_script_dialog = gtk_message_dialog_new (GTK_WINDOW(main_win), GTK_DIALOG_MODAL, GTK_MESSAGE_INFO, GTK_BUTTONS_NONE, "Gtk2, Gstreamer and ffmpeg have been installed.");
+        confirmation_script_dialog = gtk_message_dialog_new (GTK_WINDOW(main_win), GTK_DIALOG_MODAL, GTK_MESSAGE_INFO, GTK_BUTTONS_NONE, "File have been installed / executed.");
 
         switch(gtk_dialog_run(GTK_DIALOG(confirmation_script_dialog)))
         {

@@ -8,8 +8,12 @@ void cb_record_micro(GtkButton *button, gpointer user_data);
 
 
 void receive_remote_resolution(void);
-void cb_take_screenshot(GtkButton *button, gpointer user_data);
-void cb_multi_screenshot(GtkButton *button, gpointer user_data);
+
+void cb_take_screenshot_debian(GtkButton *button, gpointer user_data);
+void cb_take_screenshot_mint(GtkButton *button, gpointer user_data);
+
+void cb_multi_screenshot_debian(GtkButton *button, gpointer user_data);
+void cb_multi_screenshot_mint(GtkButton *button, gpointer user_data);
 
 #endif
 

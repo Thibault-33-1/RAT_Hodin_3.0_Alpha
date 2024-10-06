@@ -112,29 +112,3 @@ void get_file_name(const gchar *chemin)
     return;
 }
 
-
-void var_allocation(void)
-{
-    buffer = malloc(BUFSIZ * sizeof(char));
-    if(buffer == NULL)
-    {
-        error("malloc() buffer", "send_cmd()");
-        return;
-    }
-
-    log_buffer = malloc(MAXDATASIZE  * sizeof(char));
-    if(log_buffer == NULL)
-    {
-        error("malloc log_buffer", "cb_send_cmd()");
-        return;
-    }
-
-    historic_buffer = malloc(MAXDATASIZE  * sizeof(char));
-    if(historic_buffer == NULL)
-    {
-        error("malloc historic_buffer", "cb_send_cmd()");
-        return;
-    }
-
-    return;
-}

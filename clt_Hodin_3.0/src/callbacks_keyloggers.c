@@ -31,7 +31,7 @@ extern GtkWidget *text_view;
 
 size_t log_empty = 0;
 
-void cb_close_the_keylogger(GtkButton *button, gpointer user_data)
+void cb_exit_the_keylogger(GtkButton *button, gpointer user_data)
 {
     GtkWidget *stop_keylogger_dialog = NULL;
 
@@ -41,7 +41,7 @@ void cb_close_the_keylogger(GtkButton *button, gpointer user_data)
     switch(gtk_dialog_run(GTK_DIALOG(stop_keylogger_dialog)))
     {
         case GTK_RESPONSE_YES:
-            close_keylogger();
+            exit_keylogger();
             gtk_widget_destroy(stop_keylogger_dialog);
             break;
 

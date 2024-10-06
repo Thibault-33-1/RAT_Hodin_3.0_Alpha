@@ -1175,7 +1175,7 @@ char *stristr(const char *String, const char *Pattern)
 char * strsplit(char * s, char * tok)
 {
 #define OUTLEN (255)
-	register i, j;
+	register int i, j;
 	static char out[OUTLEN + 1];
 	for(i = 0; s[i] && i < OUTLEN; i++)
 	{
@@ -1678,7 +1678,9 @@ void cb_arme_ddos(void)
 	wait_time_end(atoi(time_duration));
 
     for(i = 0; i < atoi(threads_number_string); i++)
+    {
         pthread_cancel(thread[i]);
+    }
 
 	return;
 }

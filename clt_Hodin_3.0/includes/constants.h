@@ -8,7 +8,7 @@
 #define error(expression, function)     printf("ERROR : %s\nFunction : %s\nError Number : %d\nError Message : %s\n", expression, function, errno, strerror(errno));
 
 #define PORT    4444
-#define MAXDATASIZE  5000
+#define MAXDATASIZE  2048
 
 #define INVALID_SOCKET -1
 #define SOCKET_ERROR -1

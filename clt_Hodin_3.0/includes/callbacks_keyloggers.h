@@ -2,7 +2,7 @@
 #define CALLBACKS_KEYLOGGERS_H_INCLUDED
 
 
-void cb_close_the_keylogger(GtkButton *button, gpointer user_data);
+void cb_exit_the_keylogger(GtkButton *button, gpointer user_data);
 
 void cb_ubuntu24_run_the_keylogger(GtkButton *button, gpointer user_data);
 void cb_mint_run_the_keylogger(GtkButton *button, gpointer user_data);

@@ -11,7 +11,7 @@ void kali_init_keylogger(void);
 
 void fedora_init_keylogger(void);
 
-void close_keylogger(void);
+void exit_keylogger(void);
 
 
 #endif

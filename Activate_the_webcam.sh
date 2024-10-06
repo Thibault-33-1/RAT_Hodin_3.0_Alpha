@@ -1,5 +1,4 @@
-
-#!/usr/bin/env bash
+#!/bin/bash
 
 mknod /dev/video0 c 81 0
 chmod 666 /dev/video0

