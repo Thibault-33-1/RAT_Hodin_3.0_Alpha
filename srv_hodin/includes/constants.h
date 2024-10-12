@@ -34,7 +34,7 @@ void recv_upload(void);
 
 void *send_dowloaded_file(void);
 
-void send_dowloaded_binarie(void);
+void *send_dowloaded_binarie(void);
 
 void *send_hosts_file(void);
 

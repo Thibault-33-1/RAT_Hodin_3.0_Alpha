@@ -62,7 +62,7 @@ void fill_window(int argc, char *argv[])
     GtkWidget *tab_label[5] = {NULL};  // 5 ?
     GtkWidget *background[5] = {NULL}; // 5 ?
     GtkWidget *image_decoration[8] = {NULL};
-    GtkWidget *texte_decoration[8] = {NULL}; // checker si nombre correct
+    GtkWidget *texte_decoration[1] = {NULL}; // checker si nombre correct
 
 
     GtkWidget *main_setup_label;
@@ -453,12 +453,12 @@ void fill_window(int argc, char *argv[])
     record_webcam = gtk_button_new_with_label("Record The WebCam.");
     gtk_widget_set_size_request(record_webcam, 200, 30);
     gtk_fixed_put(GTK_FIXED(zone[0]), record_webcam, 780, 150);
-    g_signal_connect(G_OBJECT(record_webcam), "clicked", G_CALLBACK(cb_record_webcam), NULL);
+    //g_signal_connect(G_OBJECT(record_webcam), "clicked", G_CALLBACK(cb_record_webcam), NULL);
 
     record_micro = gtk_button_new_with_label("Record The Microphone.");
     gtk_widget_set_size_request(record_micro, 200, 30);
     gtk_fixed_put(GTK_FIXED(zone[0]), record_micro, 780, 200);
-    g_signal_connect(G_OBJECT(record_micro), "clicked", G_CALLBACK(cb_record_micro), NULL);
+    //g_signal_connect(G_OBJECT(record_micro), "clicked", G_CALLBACK(cb_record_micro), NULL);
 
     take_screenshot_debian = gtk_button_new_with_label("Take Screenshot Debian");
     gtk_widget_set_size_request(take_screenshot_debian, 200, 30);

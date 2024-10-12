@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.1] - 2024-09-29
 ### Added
-- enable general ddos attacks
+- Enable general ddos attacks
 - Update IP_Finder.py for pyhton 3
 
 ### Fixed
@@ -33,9 +33,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.1] - 2024-10-04
 ### Added
-- Add exit keylogger button, coded the server side code. The keylogger still active but it exit the thread, so the server
+- Exit button for keyloggers, coded the server side code. The keylogger still active but it exit the thread, so the server
 	go under listenning state and you can make other thing with the rat same time.
 
+- Debian and Mint multiscreenshots button, same for screenshot.
+
+### Fixed
+- zombies process
+
+## [3.0.1] - 2024-10-04
+### Added
 ### Removed
 ### Trying
 ### Fixed
+

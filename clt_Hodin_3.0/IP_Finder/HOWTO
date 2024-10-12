@@ -30,8 +30,6 @@ Install PIP on openSUSE.
 # zypper install python3-pip	#Python 3
 
 
-eg : https://www.tecmint.com/install-pip-in-linux/
-
 /**************************************************************************/
 
 

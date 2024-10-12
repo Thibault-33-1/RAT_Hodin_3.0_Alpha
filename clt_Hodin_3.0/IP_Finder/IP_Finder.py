@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     open_files()
 
-    while(i < 500) :
+    while(i < 300) :
         send_SYN().start()
         i += 1
 

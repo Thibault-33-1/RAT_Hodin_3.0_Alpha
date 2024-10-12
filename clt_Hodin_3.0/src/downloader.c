@@ -44,7 +44,8 @@ void download_files(const char *path, GtkWidget *downloader_dialog)
     int err = 0;
     size_t flag = 9;
 
-    //gdouble step_foreward  = 0.0;
+    GtkWidget *progress_bar_file_download = NULL;
+    gdouble step_foreward  = 0.0;
 
     long tailleBlockRecut = 0;
     long totalRcv = 0;
@@ -59,6 +60,7 @@ void download_files(const char *path, GtkWidget *downloader_dialog)
     GtkWidget *file_infos = NULL;
 
     size_t len_path = strlen(path) + 1;
+    char *path_file = NULL;
 
 
     port = atoi(server_port);
@@ -103,14 +105,16 @@ void download_files(const char *path, GtkWidget *downloader_dialog)
         return;
     }
 
+    /*
     if(memcmp(path, "/root/", 7) == 0)
         path = "Download_File/";
-
+    */
     // CAR PAS LE MEME NOM D'USER
     // thibault et hote thib
 
-    char username[16] = "downloaded_file";
-    sprintf(path, "%s", username);
+    //char username[16] = "downloaded_file";
+    //sprintf(path, "%s", username);
+
 
     downloaded_file = fopen(path, "w");
     if(downloaded_file == NULL)
@@ -149,9 +153,16 @@ void download_files(const char *path, GtkWidget *downloader_dialog)
         return;
     }
 
-    //gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar_text), 0.0);
 
-    gtk_grab_add(downloader_dialog);
+    progress_bar_file_download = gtk_progress_bar_new();
+    gtk_widget_set_size_request(progress_bar_file_download, 130, 20);
+
+    gtk_progress_set_format_string (GTK_PROGRESS(progress_bar_file_download), "%p%%");
+
+    gtk_progress_set_show_text(GTK_PROGRESS(progress_bar_file_download), TRUE);
+
+
+    gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar_file_download), 0.0);
 
     do
     {
@@ -161,25 +172,34 @@ void download_files(const char *path, GtkWidget *downloader_dialog)
 
         totalRcv += tailleBlockRecut;
 
-        /*
         step_foreward = ((gdouble)totalRcv * 1.0) / (gdouble)weight;
 
         if(step_foreward > 1.0)
             step_foreward = 0.0;
 
-        gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar_text), step_foreward);
+        gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progress_bar_file_download), step_foreward);
         gtk_main_iteration();
-        */
 
     }while(totalRcv < weight);
 
-    //gtk_grab_remove(downloader_dialog);
+    gtk_grab_remove(downloader_dialog);
+
+
+    path_file = malloc(256 * sizeof(char));
+    if(path_file == NULL)
+    {
+        error("malloc() path_file", "download_files()");
+        exit(-1);
+    }
+
+    path_file = strncpy(path_file, "File have been downloaded in : ", strlen("File have been downloaded in : ")+1);
+    path_file = strncat(path_file, path, len_path);
 
     // Obtaining the buffer associated with the widget.
     text_buffer = gtk_text_view_get_buffer((GtkTextView*)(text_view));
 
     // Set the default buffer text.
-    gtk_text_buffer_set_text(text_buffer, "File have been downloaded in : clt_Hodin_3.0/Download_File\n", -1);
+    gtk_text_buffer_set_text(text_buffer, path_file, -1);
 
     // Obtain iters for the start and end of points of the buffer
     gtk_text_buffer_get_start_iter(text_buffer, &start);
@@ -227,6 +247,8 @@ void download_binaries(const gchar *path, GtkWidget *progress_bar_binary)
     FILE *downloaded_file = NULL;
     size_t len_path = strlen(path) + 1;
 
+    char * path_binary_file = NULL;
+
 
     port = atoi(server_port);
 
@@ -271,9 +293,6 @@ void download_binaries(const gchar *path, GtkWidget *progress_bar_binary)
         error("send() path", "download_binaries()");
         return;
     }
-
-    if(memcmp(path, "/root/", 6) == 0)
-        path = "binairy_file";
 
     downloaded_file = fopen(path, "wb");
     if(downloaded_file == NULL)
@@ -345,11 +364,21 @@ void download_binaries(const gchar *path, GtkWidget *progress_bar_binary)
 
     printf("Success: %ld\n\n", totalRcv);
 
+    path_binary_file = malloc(256 * sizeof(char));
+    if(path_binary_file == NULL)
+    {
+        error("malloc() path_binary_file", "download_files()");
+        exit(-1);
+    }
+
+    path_binary_file = strncpy(path_binary_file, "File have been downloaded in : ", strlen("File have been downloaded in : ") + 1);
+    path_binary_file = strncat(path_binary_file, path, len_path);
+
     // Obtaining the buffer associated with the widget.
     text_buffer = gtk_text_view_get_buffer((GtkTextView*)text_view);
 
     // Set the default buffer text.
-    gtk_text_buffer_set_text(text_buffer, "File have been downloaded ...", -1);
+    gtk_text_buffer_set_text(text_buffer, path_binary_file, -1);
 
     // Obtain iters for the start and end of points of the buffer
     gtk_text_buffer_get_start_iter(text_buffer, &start);

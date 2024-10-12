@@ -200,13 +200,13 @@ void cb_send_cmd(GtkWidget *widget, gpointer user_data)
     char *historic_buffer = NULL;
     const gchar *start_command = "> Command : ";
 
-    //char historic[MAXDATASIZE] = {""};
+    char historic[MAXDATASIZE] = {""};
     //char cmd_output[MAXDATASIZE] = {""};
-    //int caractereLu = 0;
-    //int i = 0;
-    //char line[MAXDATASIZE] = {""};
+    int caractereLu = 0;
+    int i = 0;
+    char line[MAXDATASIZE] = {""};
     //char line_output[MAXDATASIZE] = {""};
-    //char *print_line = NULL;
+    char *print_line = NULL;
     //char *print_line_output = NULL;
 
     size_t data_len = 0;
@@ -308,8 +308,6 @@ void cb_send_cmd(GtkWidget *widget, gpointer user_data)
         return;
     }
 
-    /** PROBLEM DE RECEPTION DE LA COMMANDE **/
-
     // Receive the command output
     if(recv(sock, buffer, BUFSIZ, 0) == SOCKET_ERROR)
     {
@@ -332,7 +330,6 @@ void cb_send_cmd(GtkWidget *widget, gpointer user_data)
     historic_buffer = strncat(historic_buffer, buffer_cmd, strlen(buffer_cmd) + 1);
     historic_buffer = strncat(historic_buffer, "\n", 2);
 
-    /*
     // Print output command in historic
     log_cmd_historic = fopen("Logs/cmd_historic.log", "r");
     if(log_cmd_historic == NULL)
@@ -366,9 +363,8 @@ void cb_send_cmd(GtkWidget *widget, gpointer user_data)
         }
         fclose(log_cmd_historic);
     }
-    */
 
-    utf8_text = g_locale_to_utf8(historic_buffer, strlen(historic_buffer), NULL, NULL, NULL);
+    utf8_text = g_locale_to_utf8(print_line, strlen(print_line), NULL, NULL, NULL);
 
     /** Obtaining the buffer associated with the widget **/
     text_buffer = gtk_text_view_get_buffer((GtkTextView*)(historic_text_view));
