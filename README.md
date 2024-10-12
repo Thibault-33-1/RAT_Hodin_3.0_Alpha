@@ -14,7 +14,7 @@ Install file corresponding to your distrib from folder : Dependencies_installer 
  
  https://www.youtube.com/watch?v=E7BmMhXdN4Y
 
-![Capture d’écran du 2024-10-01 14-43-55](https://github.com/user-attachments/assets/c199d6ce-309a-4f2c-b47b-92e6e7cf71ff)
+![Capture d’écran du 2024-10-12 07-08-09](https://github.com/user-attachments/assets/7cd184a6-9fdb-43aa-9353-011590cb9838)
 
 ![Capture d’écran du 2024-10-01 14-43-59](https://github.com/user-attachments/assets/7b823288-fd3f-44bc-b39c-f9ca52bbcf4e)
 
