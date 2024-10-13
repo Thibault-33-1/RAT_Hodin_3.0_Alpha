@@ -41,8 +41,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - zombies process
 
-## [3.0.1] - 2024-10-04
+## [3.0.1] - 2024-10-13
 ### Added
+- Enable Chargen DDos
+
 ### Removed
 ### Trying
 ### Fixed
