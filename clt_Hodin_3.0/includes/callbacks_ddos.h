@@ -41,7 +41,9 @@ void *flood_power(void *par1)__attribute__((noreturn));
 void init_rand(unsigned long int x);
 unsigned long int rand_cmwc(void);
 unsigned short csum (unsigned short *buf, int count);
+
 unsigned short tcpcsum(struct iphdr *iph, struct tcphdr *tcph);
+
 void setup_ip_header(struct iphdr *iph);
 void setup_tcp_header(struct tcphdr *tcph);
 void *flood(void *par1)__attribute__((noreturn));
@@ -145,6 +147,15 @@ typedef struct pthread_param
 	const char *message;
 }pthread_param;
 
+
+struct thread_data_spoofed
+{
+    int throttle;
+    int thread_id;
+    unsigned int floodport;
+    struct sockaddr_in sin;
+};
+
 typedef struct pseudo_header
 {
     unsigned int source_address;
@@ -155,9 +166,30 @@ typedef struct pseudo_header
     //struct tcphdr tcp;
 }pseudo_header;
 
+
 void cb_udp_spoofed(void);
+
+
+//void init_rand_spoofed(uint32_t x);
+
+//uint32_t rand_cmwc_spoofed(void);
+
+//char *myStrCat_spoofed(char *s, char *a);
+
+//char *replStr_spoofed(char *str, size_t count);
+
+//void setup_ip_header_spoofed(struct iphdr *iph);
+
+//void setup_udp_header_spoofed(struct udphdr *udph);
+
+//unsigned short csum_spoofed (unsigned short *buf, int nwords);
+
+void *flood_udp_spoofed(void *par1);
+
 void attack(unsigned long srcip, int srcport, unsigned long destip, int destport, const char *message);
+
 void *thread_attack(void *thread_params)__attribute__((noreturn));
+
 char *getLine(FILE *f);
 
 

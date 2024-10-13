@@ -82,6 +82,9 @@
 		<Unit filename="src/remote_shell.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src/udp_spoofed.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src/utils.c">
 			<Option compilerVar="CC" />
 		</Unit>

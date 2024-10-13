@@ -59,10 +59,10 @@ void fill_window(int argc, char *argv[])
 {
     /** Tabs vars **/
     GtkWidget *note_book = NULL;
-    GtkWidget *tab_label[5] = {NULL};  // 5 ?
-    GtkWidget *background[5] = {NULL}; // 5 ?
+    GtkWidget *tab_label[5] = {NULL};
+    GtkWidget *background[5] = {NULL};
     GtkWidget *image_decoration[8] = {NULL};
-    GtkWidget *texte_decoration[1] = {NULL}; // checker si nombre correct
+    GtkWidget *texte_decoration = NULL;
 
 
     GtkWidget *main_setup_label;
@@ -218,7 +218,7 @@ void fill_window(int argc, char *argv[])
     image_decoration[6] = gtk_image_new_from_file("images/RAT_hodin.png");
     image_decoration[7] = gtk_image_new_from_file("images/By Thibault.png");
 
-    texte_decoration[0] = gtk_image_new_from_file("images/Celtic14.png");
+    texte_decoration = gtk_image_new_from_file("images/Celtic14.png");
     //texte_decoration[1] = gtk_image_new_from_file("images/Celtic15.png");
 
     /** Creating all tabs labels **/
@@ -260,7 +260,7 @@ void fill_window(int argc, char *argv[])
     gtk_fixed_put(GTK_FIXED(zone[3]), image_decoration[7], 840, 520);
 
     /** Insert text decoration **/
-    gtk_fixed_put(GTK_FIXED(zone[0]), texte_decoration[0], 827, 355);
+    gtk_fixed_put(GTK_FIXED(zone[0]), texte_decoration, 827, 355);
     //gtk_fixed_put(GTK_FIXED(zone[2]), texte_decoration[1], 820, 400);
 
     /** TAB : Main **/
@@ -706,7 +706,7 @@ void fill_window(int argc, char *argv[])
     udp_spoofed_script = gtk_button_new_with_label("UDP SPOOFED DDOS");
     gtk_widget_set_size_request(udp_spoofed_script, 200, 30);
     gtk_fixed_put(GTK_FIXED(zone[2]), udp_spoofed_script, 445, 200);
-    //g_signal_connect(G_OBJECT(udp_spoofed_script), "clicked", G_CALLBACK(cb_udp_spoofed), NULL);
+    g_signal_connect(G_OBJECT(udp_spoofed_script), "clicked", G_CALLBACK(cb_udp_spoofed), NULL);
 
     /** Frame 12 : Web Attacks **/
     GtkWidget *web_attacks_label = gtk_label_new(NULL);
