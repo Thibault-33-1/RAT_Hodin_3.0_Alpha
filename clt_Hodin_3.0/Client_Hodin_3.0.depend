@@ -1768,7 +1768,7 @@
 
 1726932258 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/includes/stream_desktop.h
 
-1728020697 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/callbacks_ddos.c
+1728804974 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/callbacks_ddos.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -1788,8 +1788,6 @@
 	<net/if.h>
 	<ifaddrs.h>
 	<pthread.h>
-	<netinet/ip.h>
-	<arpa/inet.h>
 	<gtk-2.0/gtk/gtk.h>
 	<pthread.h>
 	"../includes/constants.h"
@@ -1801,11 +1799,11 @@
 	<string.h>
 	<stdlib.h>
 
-1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/includes/callbacks_ddos.h
+1728796609 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/includes/callbacks_ddos.h
 
 1728177340 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/includes/utils.h
 
-1728138376 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/callbacks_execute_commands.c
+1728726339 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/callbacks_execute_commands.c
 	<sys/types.h>
 	<sys/socket.h>
 	<netinet/in.h>
@@ -1882,7 +1880,7 @@
 
 1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/includes/callbacks_remote_shell.h
 
-1728056950 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/callbacks_rudy_arme_ddos.c
+1728726259 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/callbacks_rudy_arme_ddos.c
 	<unistd.h>
 	<stdio.h>
 	<stdlib.h>
@@ -1903,7 +1901,7 @@
 
 1727803819 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/includes/callbacks_rudy_arme_ddos.h
 
-1728709155 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/clt_main.c
+1728799677 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/clt_Hodin_3.0/src/clt_main.c
 	<sys/types.h>
 	<sys/socket.h>
 	<netinet/in.h>

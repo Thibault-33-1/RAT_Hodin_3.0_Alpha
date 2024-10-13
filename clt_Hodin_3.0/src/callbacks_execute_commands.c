@@ -641,7 +641,7 @@ void cb_record_micro(GtkButton *button, gpointer user_data)
 
     int err = 0;
     int recorded = 0;
-    size_t flag_watch = 17;
+    size_t flag = 17;
 
     char buffer[BUFSIZ] = "";
 
@@ -824,7 +824,7 @@ void cb_record_micro(GtkButton *button, gpointer user_data)
         exit(-1);
     }
 
-    if(send(sock, (char*)&flag_watch, sizeof(flag_watch), 0) == SOCKET_ERROR)
+    if(send(sock, (char*)&flag, sizeof(flag), 0) == SOCKET_ERROR)
     {
         error("send() flag_watch", "cb_record_micro()");
         exit(-1);

