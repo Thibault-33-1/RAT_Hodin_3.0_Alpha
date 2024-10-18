@@ -757,7 +757,7 @@ void recv_upload()
     FILE *log = NULL;
     FILE *pipe[3] = {NULL};
 
-    long tailleBlockRecut = 0;
+    size_t tailleBlockRecut = 0;
     long totalRcv = 0;
     char *buffer = NULL;
 
@@ -849,6 +849,8 @@ void recv_upload()
     }while(totalRcv < weight);
 
 
+    printf("\n\npipe cmd 1\n\n");
+
     pipe[0] = popen(cmd_1, "r");
     if(pipe[0] == NULL)
     {
@@ -859,12 +861,16 @@ void recv_upload()
     fclose(log);
     pclose(pipe[0]);
 
+     printf("\n\npipe cmd 2\n\n");
+
     pipe[1] = popen(cmd_2, "r");
     if(pipe[1] == NULL)
     {
         error("popen() pipe[1]", "recv_upload()");
         return;
     }
+
+    printf("\n\npipe cmd 3\n\n");
 
     pipe[2] = popen(cmd_3, "r");
     if(pipe[2] == NULL)
@@ -1596,7 +1602,9 @@ void *upload_multi_screenshot_files(void)
 
     free(buffer);
 
-    sleep((unsigned int)delay_interval + 5);
+    //sleep((unsigned int)delay_interval + 5);
+
+    wait_time_end(delay_interval+5);
 
     do
     {
@@ -1758,6 +1766,8 @@ void *execute_record_cmd(void)
         error("recv() buffer", "execute_record_cmd()");
         pthread_exit(NULL);
     }
+
+    //pipe = popen(buffer, "r");
 
     memset (&data, 0, sizeof (data));
 

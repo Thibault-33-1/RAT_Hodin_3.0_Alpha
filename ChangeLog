@@ -46,6 +46,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enable Chargen DDos
 - Enable UDP Spoofed DDOS
 
+
+## [3.0.1] - 2024-10-15
+### Added
+- Synthétize the screenshot and multi screenshot options in one button for each.
+
 ### Removed
 ### Trying
 ### Fixed
