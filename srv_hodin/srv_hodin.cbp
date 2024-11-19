@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="srv_hodin" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/srv_hodin" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/srv_hodin" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="`pkg-config gtk+-2.0 --cflags`" />
+			<Add option="`pkg-config --cflags gstreamer-1.0`" />
+			<Add option="-Wstrict-prototypes" />
+			<Add option="-Wwrite-strings" />
+		</Compiler>
+		<Linker>
+			<Add option="-O2" />
+			<Add option="`pkg-config gtk+-2.0 --libs`" />
+			<Add option="`pkg-config --libs gstreamer-1.0`" />
+			<Add option="-pthread" />
+		</Linker>
+		<Unit filename="includes/constants.h" />
+		<Unit filename="includes/keylogger/debian_keylogger_utils.h" />
+		<Unit filename="includes/keylogger/keylogger.h" />
+		<Unit filename="includes/keylogger/keylogger_utils.h" />
+		<Unit filename="includes/keylogger/log_keys.h" />
+		<Unit filename="includes/utils.h" />
+		<Unit filename="src/keylogger/debian_keylogger_utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/keylogger/keylogger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/keylogger/keylogger_utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/keylogger/log_keys.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/srv_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

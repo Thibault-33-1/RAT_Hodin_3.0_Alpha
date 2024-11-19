@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Client_Hodin_3.0" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Client_Hodin_3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Client_Hodin_3" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
+			<Add option="-Wall" />
+			<Add option="`pkg-config gtk+-2.0 --cflags`" />
+			<Add option="`pkg-config --cflags gstreamer-1.0`" />
+		</Compiler>
+		<Linker>
+			<Add option="-O2" />
+			<Add option="`pkg-config gtk+-2.0 --libs`" />
+			<Add option="`pkg-config --libs gstreamer-1.0`" />
+		</Linker>
+		<Unit filename="includes/callbacks_ddos.h" />
+		<Unit filename="includes/callbacks_execute_commands.h" />
+		<Unit filename="includes/callbacks_gather_infos.h" />
+		<Unit filename="includes/callbacks_keyloggers.h" />
+		<Unit filename="includes/callbacks_main.h" />
+		<Unit filename="includes/callbacks_remote_shell.h" />
+		<Unit filename="includes/callbacks_rudy_arme_ddos.h" />
+		<Unit filename="includes/constants.h" />
+		<Unit filename="includes/downloader.h" />
+		<Unit filename="includes/keylogger.h" />
+		<Unit filename="includes/remote_shell.h" />
+		<Unit filename="includes/stream_desktop.h" />
+		<Unit filename="includes/utils.h" />
+		<Unit filename="src/callbacks_ddos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/callbacks_execute_commands.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/callbacks_gather_infos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/callbacks_keyloggers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/callbacks_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/callbacks_remote_shell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/callbacks_rudy_arme_ddos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/clt_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/downloader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/keylogger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/remote_shell.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/udp_spoofed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

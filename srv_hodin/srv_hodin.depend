@@ -1,0 +1,1308 @@
+# depslib dependency file v1.0
+1714047658 source:/home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/debian_keylogger_utils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<pthread.h>
+	"../../includes/keylogger/log_keys.h"
+	"../../includes/keylogger/debian_keylogger_utils.h"
+
+1558193510 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/log_keys.h
+
+1558193510 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/debian_keylogger_utils.h
+
+1727371489 source:/home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/keylogger.c
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<syslog.h>
+	<errno.h>
+	<string.h>
+	<sys/stat.h>
+	"../../includes/keylogger/keylogger_utils.h"
+	"../../includes/keylogger/debian_keylogger_utils.h"
+	"../../includes/keylogger/keylogger.h"
+
+1723713046 /usr/include/x86_64-linux-gnu/sys/stat.h
+	<features.h>
+	<bits/types.h>
+	<bits/types/struct_timespec.h>
+	<bits/types/time_t.h>
+	<bits/stat.h>
+	<bits/statx.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types.h
+	<features.h>
+	<bits/wordsize.h>
+	<bits/timesize.h>
+	<bits/typesizes.h>
+	<bits/time64.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/wordsize.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/timesize.h
+	<bits/wordsize.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/typesizes.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/time64.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
+	<bits/types.h>
+	<bits/endian.h>
+	<bits/types/time_t.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/endian.h
+	<bits/endianness.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/endianness.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/time_t.h
+	<bits/types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/stat.h
+	<bits/struct_stat.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/struct_stat.h
+	<bits/struct_stat_time64_helper.h>
+	<bits/struct_stat_time64_helper.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/struct_stat_time64_helper.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/statx.h
+	"linux/stat.h"
+	<bits/statx-generic.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/statx-generic.h
+	<bits/types/struct_statx_timestamp.h>
+	<bits/types/struct_statx.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h
+
+1558193510 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/keylogger_utils.h
+
+1727371459 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/keylogger.h
+
+1727455137 source:/home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/keylogger_utils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<pthread.h>
+	"../../includes/keylogger/log_keys.h"
+	"../../includes/keylogger/keylogger_utils.h"
+
+1727324238 source:/home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/log_keys.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<time.h>
+	<linux/input-event-codes.h>
+	<linux/input.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<pthread.h>
+	<gtk-2.0/gtk/gtk.h>
+	"../../includes/keylogger/log_keys.h"
+	"../../includes/keylogger/keylogger_utils.h"
+
+1723713046 /usr/include/x86_64-linux-gnu/sys/types.h
+	<features.h>
+	<bits/types.h>
+	<bits/types/clock_t.h>
+	<bits/types/clockid_t.h>
+	<bits/types/time_t.h>
+	<bits/types/timer_t.h>
+	<stddef.h>
+	<bits/stdint-intn.h>
+	<endian.h>
+	<sys/select.h>
+	<bits/pthreadtypes.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h
+	<bits/types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h
+	<bits/types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h
+	<bits/types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
+	<bits/types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/sys/select.h
+	<features.h>
+	<bits/types.h>
+	<bits/select.h>
+	<bits/types/sigset_t.h>
+	<bits/types/time_t.h>
+	<bits/types/struct_timeval.h>
+	<bits/types/struct_timespec.h>
+	<bits/select2.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/select.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
+	<bits/types/__sigset_t.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
+	<bits/types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/select2.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+	<bits/thread-shared-types.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
+	<bits/pthreadtypes-arch.h>
+	<bits/atomic_wide_counter.h>
+	<bits/struct_mutex.h>
+	<bits/struct_rwlock.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
+	<bits/wordsize.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+
+1726773712 source:/home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/utils.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+	<string.h>
+	<unistd.h>
+	<sys/types.h>
+	"../includes/utils.h"
+	"../includes/constants.h"
+
+1725528852 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/utils.h
+
+1727475478 /home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/constants.h
+	<errno.h>
+	<string.h>
+	<stdlib.h>
+	<gst/gst.h>
+
+1727599723 source:/home/thibault/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/srv_main.c
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<sys/stat.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<syslog.h>
+	<getopt.h>
+	<pthread.h>
+	<gtk-2.0/gtk/gtk.h>
+	<gst/gst.h>
+	<arpa/inet.h>
+	<sys/stat.h>
+	"../includes/constants.h"
+	"../includes/utils.h"
+	"../includes/keylogger/keylogger.h"
+
+1723713046 /usr/include/x86_64-linux-gnu/sys/socket.h
+	<features.h>
+	<bits/types/struct_iovec.h>
+	<stddef.h>
+	<bits/socket.h>
+	<bits/types/struct_osockaddr.h>
+	<bits/socket2.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
+	<stddef.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/socket.h
+	<stddef.h>
+	<sys/types.h>
+	<bits/socket_type.h>
+	<bits/sockaddr.h>
+	<bits/types/time_t.h>
+	<asm/socket.h>
+	<bits/socket-constants.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/socket_type.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/sockaddr.h
+
+1727723314 /usr/include/x86_64-linux-gnu/asm/socket.h
+	<asm-generic/socket.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/socket-constants.h
+	<bits/timesize.h>
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h
+
+1723713046 /usr/include/x86_64-linux-gnu/bits/socket2.h
+
+1674502174 /usr/include/gstreamer-1.0/gst/gst.h
+	<glib.h>
+	<gst/glib-compat.h>
+	<gst/gstenumtypes.h>
+	<gst/gstversion.h>
+	<gst/gstatomicqueue.h>
+	<gst/gstbin.h>
+	<gst/gstbuffer.h>
+	<gst/gstbufferlist.h>
+	<gst/gstbufferpool.h>
+	<gst/gstcaps.h>
+	<gst/gstcapsfeatures.h>
+	<gst/gstchildproxy.h>
+	<gst/gstclock.h>
+	<gst/gstcontrolsource.h>
+	<gst/gstdatetime.h>
+	<gst/gstdebugutils.h>
+	<gst/gstdevice.h>
+	<gst/gstdevicemonitor.h>
+	<gst/gstdeviceprovider.h>
+	<gst/gstdynamictypefactory.h>
+	<gst/gstelement.h>
+	<gst/gstelementmetadata.h>
+	<gst/gsterror.h>
+	<gst/gstevent.h>
+	<gst/gstghostpad.h>
+	<gst/gstinfo.h>
+	<gst/gstiterator.h>
+	<gst/gstmessage.h>
+	<gst/gstmemory.h>
+	<gst/gstmeta.h>
+	<gst/gstminiobject.h>
+	<gst/gstobject.h>
+	<gst/gststreamcollection.h>
+	<gst/gstpad.h>
+	<gst/gstparamspecs.h>
+	<gst/gstpipeline.h>
+	<gst/gstplugin.h>
+	<gst/gstpoll.h>
+	<gst/gstpreset.h>
+	<gst/gstprotection.h>
+	<gst/gstquery.h>
+	<gst/gstregistry.h>
+	<gst/gstpromise.h>
+	<gst/gstsample.h>
+	<gst/gstsegment.h>
+	<gst/gststreams.h>
+	<gst/gststructure.h>
+	<gst/gstsystemclock.h>
+	<gst/gsttaglist.h>
+	<gst/gsttagsetter.h>
+	<gst/gsttask.h>
+	<gst/gsttaskpool.h>
+	<gst/gsttoc.h>
+	<gst/gsttocsetter.h>
+	<gst/gsttracer.h>
+	<gst/gsttracerfactory.h>
+	<gst/gsttracerrecord.h>
+	<gst/gsttypefind.h>
+	<gst/gsttypefindfactory.h>
+	<gst/gsturi.h>
+	<gst/gstutils.h>
+	<gst/gstvalue.h>
+	<gst/gstparse.h>
+	<gst/gstcompat.h>
+	<TargetConditionals.h>
+	<gst/gstmacos.h>
+
+1677160467 /usr/include/glib-2.0/glib.h
+	<glib/galloca.h>
+	<glib/garray.h>
+	<glib/gasyncqueue.h>
+	<glib/gatomic.h>
+	<glib/gbacktrace.h>
+	<glib/gbase64.h>
+	<glib/gbitlock.h>
+	<glib/gbookmarkfile.h>
+	<glib/gbytes.h>
+	<glib/gcharset.h>
+	<glib/gchecksum.h>
+	<glib/gconvert.h>
+	<glib/gdataset.h>
+	<glib/gdate.h>
+	<glib/gdatetime.h>
+	<glib/gdir.h>
+	<glib/genviron.h>
+	<glib/gerror.h>
+	<glib/gfileutils.h>
+	<glib/ggettext.h>
+	<glib/ghash.h>
+	<glib/ghmac.h>
+	<glib/ghook.h>
+	<glib/ghostutils.h>
+	<glib/giochannel.h>
+	<glib/gkeyfile.h>
+	<glib/glist.h>
+	<glib/gmacros.h>
+	<glib/gmain.h>
+	<glib/gmappedfile.h>
+	<glib/gmarkup.h>
+	<glib/gmem.h>
+	<glib/gmessages.h>
+	<glib/gnode.h>
+	<glib/goption.h>
+	<glib/gpattern.h>
+	<glib/gpoll.h>
+	<glib/gprimes.h>
+	<glib/gqsort.h>
+	<glib/gquark.h>
+	<glib/gqueue.h>
+	<glib/grand.h>
+	<glib/grcbox.h>
+	<glib/grefcount.h>
+	<glib/grefstring.h>
+	<glib/gregex.h>
+	<glib/gscanner.h>
+	<glib/gsequence.h>
+	<glib/gshell.h>
+	<glib/gslice.h>
+	<glib/gslist.h>
+	<glib/gspawn.h>
+	<glib/gstrfuncs.h>
+	<glib/gstringchunk.h>
+	<glib/gstring.h>
+	<glib/gstrvbuilder.h>
+	<glib/gtestutils.h>
+	<glib/gthread.h>
+	<glib/gthreadpool.h>
+	<glib/gtimer.h>
+	<glib/gtimezone.h>
+	<glib/gtrashstack.h>
+	<glib/gtree.h>
+	<glib/gtypes.h>
+	<glib/gunicode.h>
+	<glib/guri.h>
+	<glib/gutils.h>
+	<glib/guuid.h>
+	<glib/gvariant.h>
+	<glib/gvarianttype.h>
+	<glib/gversion.h>
+	<glib/gversionmacros.h>
+	<glib/gwin32.h>
+	<glib/deprecated/gallocator.h>
+	<glib/deprecated/gcache.h>
+	<glib/deprecated/gcompletion.h>
+	<glib/deprecated/gmain.h>
+	<glib/deprecated/grel.h>
+	<glib/deprecated/gthread.h>
+	<glib/glib-autocleanups.h>
+	<glib/glib-typeof.h>
+
+1677160467 /usr/include/glib-2.0/glib/galloca.h
+	<glib/gtypes.h>
+	<string.h>
+	<alloca.h>
+	<alloca.h>
+	<malloc.h>
+
+1677160467 /usr/include/glib-2.0/glib/gtypes.h
+	<glibconfig.h>
+	<glib/gmacros.h>
+	<glib/gversionmacros.h>
+	<time.h>
+
+1715681492 /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h
+	<glib/gmacros.h>
+	<limits.h>
+	<float.h>
+
+1677160467 /usr/include/glib-2.0/glib/gmacros.h
+	<stddef.h>
+
+1677160467 /usr/include/glib-2.0/glib/gversionmacros.h
+
+1677160467 /usr/include/glib-2.0/glib/garray.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gasyncqueue.h
+	<glib/gthread.h>
+
+1677160467 /usr/include/glib-2.0/glib/gthread.h
+	<glib/gatomic.h>
+	<glib/gerror.h>
+	<glib/gutils.h>
+
+1677160467 /usr/include/glib-2.0/glib/gatomic.h
+	<glib/gtypes.h>
+	<glib/glib-typeof.h>
+
+1677160467 /usr/include/glib-2.0/glib/glib-typeof.h
+	<glib/gversionmacros.h>
+	<type_traits>
+
+1677160467 /usr/include/glib-2.0/glib/gerror.h
+	<stdarg.h>
+	<glib/gquark.h>
+
+1677160467 /usr/include/glib-2.0/glib/gquark.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gutils.h
+	<glib/gtypes.h>
+	<stdarg.h>
+	<stdlib.h>
+
+1677160467 /usr/include/glib-2.0/glib/gbacktrace.h
+	<glib/gtypes.h>
+	<sys/select.h>
+	<signal.h>
+
+1677160467 /usr/include/glib-2.0/glib/gbase64.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gbitlock.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gbookmarkfile.h
+	<glib/gdatetime.h>
+	<glib/gerror.h>
+	<time.h>
+
+1677160467 /usr/include/glib-2.0/glib/gdatetime.h
+	<glib/gtimezone.h>
+
+1677160467 /usr/include/glib-2.0/glib/gtimezone.h
+	<glib/gerror.h>
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gbytes.h
+	<glib/gtypes.h>
+	<glib/garray.h>
+
+1677160467 /usr/include/glib-2.0/glib/gcharset.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gchecksum.h
+	<glib/gtypes.h>
+	<glib/gbytes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gconvert.h
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/gdataset.h
+	<glib/gquark.h>
+
+1677160467 /usr/include/glib-2.0/glib/gdate.h
+	<time.h>
+	<glib/gtypes.h>
+	<glib/gquark.h>
+
+1677160467 /usr/include/glib-2.0/glib/gdir.h
+	<glib/gerror.h>
+	<dirent.h>
+
+1677160467 /usr/include/glib-2.0/glib/genviron.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gfileutils.h
+	<glibconfig.h>
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/ggettext.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/ghash.h
+	<glib/gtypes.h>
+	<glib/glist.h>
+
+1677160467 /usr/include/glib-2.0/glib/glist.h
+	<glib/gmem.h>
+	<glib/gnode.h>
+
+1677160467 /usr/include/glib-2.0/glib/gmem.h
+	<glib/gutils.h>
+	<glib/glib-typeof.h>
+
+1677160467 /usr/include/glib-2.0/glib/gnode.h
+	<glib/gmem.h>
+
+1677160467 /usr/include/glib-2.0/glib/ghmac.h
+	<glib/gtypes.h>
+	"gchecksum.h"
+
+1677160467 /usr/include/glib-2.0/glib/ghook.h
+	<glib/gmem.h>
+
+1677160467 /usr/include/glib-2.0/glib/ghostutils.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/giochannel.h
+	<glib/gconvert.h>
+	<glib/gmain.h>
+	<glib/gstring.h>
+
+1677160467 /usr/include/glib-2.0/glib/gmain.h
+	<glib/gpoll.h>
+	<glib/gslist.h>
+	<glib/gthread.h>
+
+1677160467 /usr/include/glib-2.0/glib/gpoll.h
+	<glibconfig.h>
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gslist.h
+	<glib/gmem.h>
+	<glib/gnode.h>
+
+1677160467 /usr/include/glib-2.0/glib/gstring.h
+	<glib/gtypes.h>
+	<glib/gunicode.h>
+	<glib/gbytes.h>
+	<glib/gutils.h>
+
+1677160467 /usr/include/glib-2.0/glib/gunicode.h
+	<glib/gerror.h>
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gkeyfile.h
+	<glib/gbytes.h>
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/gmappedfile.h
+	<glib/gbytes.h>
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/gmarkup.h
+	<stdarg.h>
+	<glib/gerror.h>
+	<glib/gslist.h>
+
+1677160467 /usr/include/glib-2.0/glib/gmessages.h
+	<stdarg.h>
+	<glib/gatomic.h>
+	<glib/gtypes.h>
+	<glib/gmacros.h>
+	<glib/gvariant.h>
+
+1677160467 /usr/include/glib-2.0/glib/gvariant.h
+	<glib/gvarianttype.h>
+	<glib/gstring.h>
+	<glib/gbytes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gvarianttype.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/goption.h
+	<glib/gerror.h>
+	<glib/gquark.h>
+
+1677160467 /usr/include/glib-2.0/glib/gpattern.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gprimes.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gqsort.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gqueue.h
+	<glib/glist.h>
+
+1677160467 /usr/include/glib-2.0/glib/grand.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/grcbox.h
+	<glib/gmem.h>
+	<glib/glib-typeof.h>
+
+1677160467 /usr/include/glib-2.0/glib/grefcount.h
+	<glib/gatomic.h>
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/grefstring.h
+	"gmem.h"
+	"gmacros.h"
+
+1677160467 /usr/include/glib-2.0/glib/gregex.h
+	<glib/gerror.h>
+	<glib/gstring.h>
+
+1677160467 /usr/include/glib-2.0/glib/gscanner.h
+	<glib/gdataset.h>
+	<glib/ghash.h>
+
+1677160467 /usr/include/glib-2.0/glib/gsequence.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gshell.h
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/gslice.h
+	<glib/gtypes.h>
+	<string.h>
+
+1677160467 /usr/include/glib-2.0/glib/gspawn.h
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/gstrfuncs.h
+	<stdarg.h>
+	<glib/gmacros.h>
+	<glib/gtypes.h>
+	<glib/gerror.h>
+
+1677160467 /usr/include/glib-2.0/glib/gstringchunk.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gstrvbuilder.h
+	<glib/gstrfuncs.h>
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gtestutils.h
+	<glib/gmessages.h>
+	<glib/gstring.h>
+	<glib/gerror.h>
+	<glib/gslist.h>
+	<errno.h>
+	<stdlib.h>
+	<string.h>
+
+1677160467 /usr/include/glib-2.0/glib/gthreadpool.h
+	<glib/gthread.h>
+
+1677160467 /usr/include/glib-2.0/glib/gtimer.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gtrashstack.h
+	<glib/gutils.h>
+
+1677160467 /usr/include/glib-2.0/glib/gtree.h
+	<glib/gnode.h>
+
+1677160467 /usr/include/glib-2.0/glib/guri.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/guuid.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gversion.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/gwin32.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/deprecated/gallocator.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/deprecated/gcache.h
+	<glib/glist.h>
+
+1677160467 /usr/include/glib-2.0/glib/deprecated/gcompletion.h
+	<glib/glist.h>
+
+1677160467 /usr/include/glib-2.0/glib/deprecated/gmain.h
+	<glib/gmain.h>
+
+1677160467 /usr/include/glib-2.0/glib/deprecated/grel.h
+	<glib/gtypes.h>
+
+1677160467 /usr/include/glib-2.0/glib/deprecated/gthread.h
+	<glib/gthread.h>
+	<sys/types.h>
+	<pthread.h>
+
+1677160467 /usr/include/glib-2.0/glib/glib-autocleanups.h
+
+1674502174 /usr/include/gstreamer-1.0/gst/glib-compat.h
+	<glib.h>
+
+1674922275 /usr/include/gstreamer-1.0/gst/gstenumtypes.h
+	<glib-object.h>
+	<gst/gstconfig.h>
+
+1677160467 /usr/include/glib-2.0/glib-object.h
+	<gobject/gbinding.h>
+	<gobject/gbindinggroup.h>
+	<gobject/gboxed.h>
+	<gobject/genums.h>
+	<gobject/glib-enumtypes.h>
+	<gobject/gobject.h>
+	<gobject/gparam.h>
+	<gobject/gparamspecs.h>
+	<gobject/gsignal.h>
+	<gobject/gsignalgroup.h>
+	<gobject/gsourceclosure.h>
+	<gobject/gtype.h>
+	<gobject/gtypemodule.h>
+	<gobject/gtypeplugin.h>
+	<gobject/gvaluearray.h>
+	<gobject/gvalue.h>
+	<gobject/gvaluetypes.h>
+	<gobject/gobject-autocleanups.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gbinding.h
+	<glib.h>
+	<gobject/gobject.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gobject.h
+	<gobject/gtype.h>
+	<gobject/gvalue.h>
+	<gobject/gparam.h>
+	<gobject/gclosure.h>
+	<gobject/gsignal.h>
+	<gobject/gboxed.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gtype.h
+	<glib.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gvalue.h
+	<gobject/gtype.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gparam.h
+	<gobject/gvalue.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gclosure.h
+	<gobject/gtype.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gsignal.h
+	<gobject/gclosure.h>
+	<gobject/gvalue.h>
+	<gobject/gparam.h>
+	<gobject/gmarshal.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gmarshal.h
+
+1677160467 /usr/include/glib-2.0/gobject/gboxed.h
+	<gobject/gtype.h>
+	<gobject/glib-types.h>
+
+1677160467 /usr/include/glib-2.0/gobject/glib-types.h
+	<glib.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gbindinggroup.h
+	<glib.h>
+	<gobject/gobject.h>
+	<gobject/gbinding.h>
+
+1677160467 /usr/include/glib-2.0/gobject/genums.h
+	<gobject/gtype.h>
+
+1715681492 /usr/include/glib-2.0/gobject/glib-enumtypes.h
+	<glib-object.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gparamspecs.h
+	<gobject/gvalue.h>
+	<gobject/genums.h>
+	<gobject/gboxed.h>
+	<gobject/gobject.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gsignalgroup.h
+	<glib.h>
+	<gobject/gobject.h>
+	<gobject/gsignal.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gsourceclosure.h
+	<gobject/gclosure.h>
+	<gobject/glib-types.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gtypemodule.h
+	<gobject/gobject.h>
+	<gobject/genums.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gtypeplugin.h
+	<gobject/gtype.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gvaluearray.h
+	<gobject/gvalue.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gvaluetypes.h
+	<gobject/gvalue.h>
+
+1677160467 /usr/include/glib-2.0/gobject/gobject-autocleanups.h
+
+1674922275 /usr/include/gstreamer-1.0/gst/gstconfig.h
+
+1674922275 /usr/include/gstreamer-1.0/gst/gstversion.h
+	<glib.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstatomicqueue.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstconfig.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstbin.h
+	<gst/gstelement.h>
+	<gst/gstiterator.h>
+	<gst/gstbus.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstelement.h
+	<glib.h>
+	<gst/gstconfig.h>
+	<gst/gstobject.h>
+	<gst/gstpad.h>
+	<gst/gstbus.h>
+	<gst/gstclock.h>
+	<gst/gstelementfactory.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+	<gst/gstiterator.h>
+	<gst/gstmessage.h>
+	<gst/gstquery.h>
+	<gst/gsttaglist.h>
+	<gst/gstcontext.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstobject.h
+	<gst/gstconfig.h>
+	<glib-object.h>
+	<gst/gstcontrolbinding.h>
+	<gst/gstcontrolsource.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstcontrolbinding.h
+	<gst/gstconfig.h>
+	<glib-object.h>
+	<gst/gstcontrolsource.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstcontrolsource.h
+	<gst/gstconfig.h>
+	<glib-object.h>
+	<gst/gstclock.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstclock.h
+	<gst/gstconfig.h>
+	<glib.h>
+	<gst/gstobject.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpad.h
+	<gst/gstconfig.h>
+	<glib.h>
+	<gst/gstobject.h>
+	<gst/gstbuffer.h>
+	<gst/gstbufferlist.h>
+	<gst/gstcaps.h>
+	<gst/gstpadtemplate.h>
+	<gst/gstevent.h>
+	<gst/gstquery.h>
+	<gst/gsttask.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstbuffer.h
+	<gst/gstminiobject.h>
+	<gst/gstclock.h>
+	<gst/gstallocator.h>
+	<gst/gstcaps.h>
+	<gst/gstmeta.h>
+	<gst/gstmeta.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstminiobject.h
+	<gst/gstconfig.h>
+	<glib-object.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstallocator.h
+	<gst/gstmemory.h>
+	<gst/gstobject.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstmemory.h
+	<gst/gstconfig.h>
+	<glib-object.h>
+	<gst/gstminiobject.h>
+	<gst/gstobject.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstcaps.h
+	<gst/gstconfig.h>
+	<gst/gstminiobject.h>
+	<gst/gststructure.h>
+	<gst/gstcapsfeatures.h>
+	<gst/glib-compat.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gststructure.h
+	<gst/gstconfig.h>
+	<glib-object.h>
+	<gst/gstclock.h>
+	<gst/gstdatetime.h>
+	<gst/glib-compat.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdatetime.h
+	<gst/gstconfig.h>
+	<time.h>
+	<glib.h>
+	<glib-object.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstcapsfeatures.h
+	<gst/gstconfig.h>
+	<gst/glib-compat.h>
+	<glib-object.h>
+	<glib.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstmeta.h
+	<glib.h>
+	<gst/gstbuffer.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstbufferlist.h
+	<gst/gstbuffer.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpadtemplate.h
+	<gst/gstconfig.h>
+	<gst/gstobject.h>
+	<gst/gstbuffer.h>
+	<gst/gstcaps.h>
+	<gst/gstevent.h>
+	<gst/gstquery.h>
+	<gst/gsttask.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstevent.h
+	<gst/gstminiobject.h>
+	<gst/gstformat.h>
+	<gst/gstobject.h>
+	<gst/gstclock.h>
+	<gst/gststructure.h>
+	<gst/gsttaglist.h>
+	<gst/gstsegment.h>
+	<gst/gstmessage.h>
+	<gst/gstcontext.h>
+	<gst/gststreams.h>
+	<gst/gsttoc.h>
+	<gst/gststreamcollection.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstformat.h
+	<glib.h>
+	<gst/gstiterator.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstiterator.h
+	<glib-object.h>
+	<gst/gstconfig.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttaglist.h
+	<gst/gstdatetime.h>
+	<gst/gstsample.h>
+	<gst/gstbuffer.h>
+	<gst/glib-compat.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstsample.h
+	<gst/gstbuffer.h>
+	<gst/gstbufferlist.h>
+	<gst/gstcaps.h>
+	<gst/gstsegment.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstsegment.h
+	<gst/gstformat.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstmessage.h
+	<glib.h>
+	<gst/gstminiobject.h>
+	<gst/gstobject.h>
+	<gst/gstelement.h>
+	<gst/gsttaglist.h>
+	<gst/gststructure.h>
+	<gst/gstquery.h>
+	<gst/gsttoc.h>
+	<gst/gstdevice.h>
+	<gst/gststreams.h>
+	<gst/gststreamcollection.h>
+	<gst/gstquery.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstquery.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstconfig.h>
+	<gst/gstminiobject.h>
+	<gst/gstiterator.h>
+	<gst/gststructure.h>
+	<gst/gstformat.h>
+	<gst/gstpad.h>
+	<gst/gstallocator.h>
+	<gst/gsttoc.h>
+	<gst/gstcontext.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttoc.h
+	<gst/gstconfig.h>
+	<gst/gstminiobject.h>
+	<gst/gststructure.h>
+	<gst/gsttaglist.h>
+	<gst/gstformat.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstcontext.h
+	<glib.h>
+	<gst/gstminiobject.h>
+	<gst/gststructure.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdevice.h
+	<gst/gstelement.h>
+	<gst/gstcaps.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gststreams.h
+	<gst/gstobject.h>
+	<gst/gstevent.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gststreamcollection.h
+	<gst/gstobject.h>
+	<gst/gststreamcollection.h>
+	<gst/gststreams.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttask.h
+	<gst/gstobject.h>
+	<gst/gsttaskpool.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttaskpool.h
+	<gst/gstobject.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstbus.h
+	<gst/gstmessage.h>
+	<gst/gstclock.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstelementfactory.h
+	<gst/gstconfig.h>
+	<gst/gstelement.h>
+	<gst/gstpad.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+	<gst/gsturi.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstplugin.h
+	<gst/gstconfig.h>
+	<gst/gstobject.h>
+	<gst/gstmacros.h>
+	<gst/gststructure.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstmacros.h
+	<glib.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpluginfeature.h
+	<glib-object.h>
+	<gst/gstobject.h>
+	<gst/gstplugin.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsturi.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstconfig.h>
+	<gst/gstelement.h>
+	"gstminiobject.h"
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstbufferpool.h
+	<gst/gstminiobject.h>
+	<gst/gstpad.h>
+	<gst/gstbuffer.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstchildproxy.h
+	<glib-object.h>
+	<gst/gst.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdebugutils.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstconfig.h>
+	<gst/gstbin.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdevicemonitor.h
+	<gst/gstobject.h>
+	<gst/gstdevice.h>
+	<gst/gstdeviceprovider.h>
+	<gst/gstdeviceproviderfactory.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdeviceprovider.h
+	<gst/gstelement.h>
+	<gst/gstdeviceproviderfactory.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h
+	<gst/gstconfig.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+	<gst/gstdeviceprovider.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstdynamictypefactory.h
+	<gst/gstconfig.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstelementmetadata.h
+	<glib.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsterror.h
+	<glib.h>
+	<glib-object.h>
+	<errno.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstghostpad.h
+	<gst/gstpad.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstinfo.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstconfig.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstparamspecs.h
+	<gst/gstvalue.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstvalue.h
+	<gst/gstconfig.h>
+	<gst/gstcaps.h>
+	<gst/gststructure.h>
+	<gst/gstcapsfeatures.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpipeline.h
+	<gst/gstbin.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpoll.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstclock.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpreset.h
+	<glib-object.h>
+	<gst/gstconfig.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstprotection.h
+	<gst/gst.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstregistry.h
+	<gst/gstconfig.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstpromise.h
+	<gst/gst.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstsystemclock.h
+	<gst/gstclock.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttagsetter.h
+	<gst/gst.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttocsetter.h
+	<gst/gst.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttracer.h
+	<glib.h>
+	<glib-object.h>
+	<gst/gstobject.h>
+	<gst/gstconfig.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttracerfactory.h
+	<gst/gstcaps.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttracerrecord.h
+	<gst/gstobject.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttypefind.h
+	<gst/gstcaps.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gsttypefindfactory.h
+	<gst/gstcaps.h>
+	<gst/gstplugin.h>
+	<gst/gstpluginfeature.h>
+	<gst/gsttypefind.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstutils.h
+	<glib.h>
+	<gst/gstconfig.h>
+	<gst/gstbin.h>
+	<gst/gstparse.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstparse.h
+	<gst/gstelement.h>
+
+1674502174 /usr/include/gstreamer-1.0/gst/gstcompat.h
+	<glib.h>
+	<gst/gstpad.h>
+
+1728725331 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/debian_keylogger_utils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<pthread.h>
+	"../../includes/keylogger/log_keys.h"
+	"../../includes/keylogger/debian_keylogger_utils.h"
+
+1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/log_keys.h
+
+1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/debian_keylogger_utils.h
+
+1728013709 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/keylogger.c
+	<stdlib.h>
+	<stdio.h>
+	<unistd.h>
+	<syslog.h>
+	<errno.h>
+	<string.h>
+	<sys/stat.h>
+	"../../includes/keylogger/keylogger_utils.h"
+	"../../includes/keylogger/debian_keylogger_utils.h"
+	"../../includes/keylogger/keylogger.h"
+
+1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/keylogger_utils.h
+
+1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/keylogger/keylogger.h
+
+1727676904 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/keylogger_utils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<pthread.h>
+	"../../includes/keylogger/log_keys.h"
+	"../../includes/keylogger/keylogger_utils.h"
+
+1728012837 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/keylogger/log_keys.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<time.h>
+	<linux/input-event-codes.h>
+	<linux/input.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<pthread.h>
+	<gtk-2.0/gtk/gtk.h>
+	"../../includes/keylogger/log_keys.h"
+	"../../includes/keylogger/keylogger_utils.h"
+
+1729479479 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/srv_main.c
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<sys/stat.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<syslog.h>
+	<getopt.h>
+	<pthread.h>
+	<gtk-2.0/gtk/gtk.h>
+	<gst/gst.h>
+	<arpa/inet.h>
+	<sys/stat.h>
+	"../includes/constants.h"
+	"../includes/utils.h"
+	"../includes/keylogger/keylogger.h"
+
+1729472201 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/constants.h
+	<errno.h>
+	<string.h>
+	<stdlib.h>
+	<gst/gst.h>
+
+1727676904 /home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/includes/utils.h
+
+1727676904 source:/home/thib/Bureau/Programmation/Linux/C/RAT_Hodin_3.0/srv_hodin/src/utils.c
+	<stdio.h>
+	<stdlib.h>
+	<errno.h>
+	<time.h>
+	<string.h>
+	<unistd.h>
+	<sys/types.h>
+	"../includes/utils.h"
+	"../includes/constants.h"
+
